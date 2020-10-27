@@ -39,10 +39,13 @@ esac
 fi
 
 # Create target directory if it doesn't exist already
-mkdir -p $BASE_DIR/$2
+mkdir -p $2
 
 FILE_PATH="$1"
-DEST_DIR=$BASE_DIR/$2
+DEST_DIR="$2"
+
+echo $FILE_PATH
+echo $DEST_DIR
 
 # Download images
 
