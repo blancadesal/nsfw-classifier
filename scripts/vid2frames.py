@@ -41,10 +41,10 @@ def extract_frames(source_file, target_dir, msec_time_interval):
 
 if __name__ == "__main__":
 
-    parser = argparse.ArgumentParser()
-    parser.add_argument("source_file", help="path to video")
-    parser.add_argument("target_dir", help="path to target directory")
-    parser.add_argument("msec_time_interval", help="sampling time interval in msec", type=int)
-    args = parser.parse_args()
-    # print(args)
-    extract_frames(args.source_file, args.target_dir, args.msec_time_interval)
+  parser = argparse.ArgumentParser()
+  parser.add_argument("source_file", help="path to video")
+  parser.add_argument("target_dir", help="path to target directory")
+  parser.add_argument("msec_time_interval", help="sampling time interval in msec", type=int)
+  args = parser.parse_args()
+  # print(args)
+  extract_frames(args.source_file, args.target_dir, args.msec_time_interval)
