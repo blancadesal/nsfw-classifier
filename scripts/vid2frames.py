@@ -4,6 +4,8 @@ import cv2
 import functools
 import time
 
+# Timer decorator adapted from 
+# https://realpython.com/python-timer/#a-python-timer-decorator
 def timer(func):
     @functools.wraps(func)
     def wrapper_timer(*args, **kwargs):
