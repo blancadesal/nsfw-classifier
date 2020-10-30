@@ -1,8 +1,22 @@
 import os
 import argparse
 import cv2
+import functools
+import time
+
+def timer(func):
+    @functools.wraps(func)
+    def wrapper_timer(*args, **kwargs):
+        tic = time.perf_counter()
+        value = func(*args, **kwargs)
+        toc = time.perf_counter()
+        elapsed_time = toc - tic
+        print(f"Elapsed time: {elapsed_time:0.4f} seconds")
+        return value
+    return wrapper_timer
 
 
+@timer
 def extract_frames(source_file, target_dir, msec_time_interval):
   """Function to extract frames from input video file
   and save them as separate frames in an output directory.
@@ -34,7 +48,7 @@ def extract_frames(source_file, target_dir, msec_time_interval):
     cv2.imwrite(os.path.join(target_dir, frame_name), frame)    
     count += 1
 
-  print(f'Extracted {count - 1} frames')
+  print(f'Extracted {count + 1} frames')
   cap.release()
   cv2.destroyAllWindows()
 
