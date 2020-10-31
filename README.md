@@ -7,5 +7,6 @@ This repository contains a series of notebooks that serve as the basis for my pr
 3. NSFW-resnet50-baseline-with-augmentation.ipynb
 4. NSFW-resnet50-baseline-with-cleaned-dataset-and-augmentation.ipynb
 5. NSFW_Squeezenet_model.ipynb
+6. NSFW-MobileNetV2-model.ipynb
 
-Of these, the first two contain a detailed discussion of my overall approach, methodology and results. The last three are code-only. 
+Of these, the first two contain a detailed discussion of my overall approach, methodology and results. The last four are code-only. 
